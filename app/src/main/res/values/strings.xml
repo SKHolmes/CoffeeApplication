@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="test">Hello GIT</string>
     <string name="catchPhrase">Made by coffee lovers, for coffee lovers.</string>
 </resources>
