@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView txt = (TextView)findViewById(R.id.vayamos);
+        TextView txt = (TextView)findViewById(R.id.vayamos_main);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Lobster_1.3.otf");
         txt.setTypeface(custom_font);
         setButtonListener();

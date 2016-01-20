@@ -9,14 +9,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="32dp"
     tools:context=".MainActivity"    >
 
     <TextView
-        android:id="@+id/vayamos"
+        android:id="@+id/vayamos_main"
         android:text="VAYAMOS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_marginBottom="64dp"
         android:textAlignment="center"
         android:textSize="42sp"
         android:textColor="@color/header"
@@ -24,10 +25,10 @@
 
     <ImageButton
         android:id="@+id/coffeeButton"
-        android:layout_margin="32dp"
+        android:layout_marginBottom="64dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_below="@id/vayamos"
+        android:layout_below="@id/vayamos_main"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
         android:src="@drawable/coffee"
@@ -37,7 +38,6 @@
     <TextView
         android:id="@+id/catchPhrase"
         android:text="@string/catchPhrase"
-        android:layout_margin="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/coffeeButton"
