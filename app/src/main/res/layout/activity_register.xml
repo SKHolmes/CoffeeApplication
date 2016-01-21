@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="@color/darkorange"
+    tools:context="com.example.android.test.Register">
+
+    <TextView
+        android:id="@+id/vayamos_register"
+        android:text="VAYAMOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        android:textColor="@color/header"/>
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/vayamos_register"
+        android:background="@color/header"
+        android:layout_marginBottom="64dp"/>
+
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator"
+        android:hint="ENTER A VALID EMAIL"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterEmail"
+        android:hint="ENTER YOUR PASSWORD"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/reenterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterPassword"
+        android:hint="RE-ENTER YOUR PASSWORD"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_below="@id/reenterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="GO!"
+        android:textSize="32sp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="By accepting you agree to our simple terms and conditions."
+        android:textSize="12sp"
+        android:textAlignment="center"/>
+
+</RelativeLayout>

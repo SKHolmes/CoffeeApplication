@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
+    android:background="@color/darkorange"
     tools:context="com.example.android.test.HomePage">
 
     <TextView
@@ -16,4 +17,79 @@
         android:textSize="42sp"
         android:textColor="@color/header"/>
 
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/vayamos_home"
+        android:background="@color/header"
+        android:layout_marginBottom="64dp"/>
+
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator">
+
+        <TextView
+            android:id="@+id/email"
+            android:text="Email:"
+            android:textSize="24sp"
+            android:textColor="@color/header"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+
+        <EditText
+            android:id="@+id/emailTextArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Email"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLayout">
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Password:"
+            android:textColor="@color/header"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/passwordTextArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Password"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/forgottenPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Forgotten your Password?"
+        android:layout_below="@id/passwordLayout"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Register Here!"
+        android:layout_below="@id/forgottenPassword"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:text="Selling coffee, not buying?"/>
 </RelativeLayout>
