@@ -1,5 +1,6 @@
 package com.example.android.test;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Register extends AppCompatActivity {
+
+    public static final String PREFERENCES = "myPreferences";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +41,18 @@ public class Register extends AppCompatActivity {
         String password = passwordTxt.getText().toString();
         String reenterPassword = reenterPasswordTxt.getText().toString();
 
-        if(!validEmail(email)){
+        if(!validEmail(email)){                         //Email is not valid.
             //Exit and return message
         }else{
-            //Check password.
+            if(!(password.equals(reenterPassword))){    //Passwords don't match.
+                //LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                //PopupWindow pw = new PopupWindow(inflater.inflate(R.layout.popup, null, false), 100, 100, true);
+                //pw.showAtLocation(this.findViewById(R.id.registerMain), Gravity.CENTER, 0, 0);
+            }else{
+                if(!emailExists(email)) {
+                    newRegister(email, password);
+                }
+            }
         }
     }
     
@@ -49,4 +60,22 @@ public class Register extends AppCompatActivity {
     private boolean validEmail(String email){
         return true;
     }
+
+    private boolean newRegister(String email, String pw){
+        SharedPreferences prefs = getSharedPreferences(PREFERENCES, 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(email, pw);
+        editor.commit();
+        return true;
+    }
+
+    private boolean emailExists(String email){
+        SharedPreferences prefs = getSharedPreferences(PREFERENCES, 0);
+        if(prefs.getString(email, "ERROR!").equals("ERROR!")){
+            //POPUP: Email already exists
+            return true;
+        }
+        return false;
+    }
 }
+
